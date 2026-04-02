@@ -1,12 +1,10 @@
 package Lab3.prob4;
 
 public class Admin {
-	public static double computeTotalRent(Object[] properties) {
+	public static double computeTotalRent(Property[] properties) {
 		double totalRent = 0;
-		for (Object o : properties) {
-			if (o instanceof Property) {
-				totalRent += ((Property) o).computeRent();
-			}
+		for (Property o : properties) {
+				totalRent += o.computeRent();
 		}
 		return totalRent;
 	}

@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-class Order {
+public class Order {
     private LocalDate orderDate;
     private List<Item> items;
     private Customer customer;
 
     //use a factory method
-    private Order(LocalDate orderDate, Customer customer) {
+    Order(LocalDate orderDate, Customer customer) {
         this.orderDate = orderDate;
         items = new ArrayList<Item>();
         this.customer = customer;
@@ -24,8 +24,8 @@ class Order {
         return ord;
     }
 
-    public void addItem(String name) {
-        items.add(new Item(name));
+    void addItem(Item item) {
+        items.add(item);
     }
 
     @Override
